@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @wuhao.name %>
+</p>
+
+<p>
+  <b>Due on:</b>
+  <%= @wuhao.due_on %>
+</p>
+
+<p>
+  <b>Completed:</b>
+  <%= @wuhao.completed %>
+</p>
+
+
+<%= link_to 'Edit', edit_wuhao_path(@wuhao) %> |
+<%= link_to 'Back', wuhaos_path %>

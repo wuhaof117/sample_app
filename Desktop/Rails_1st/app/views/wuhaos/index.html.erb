@@ -1,0 +1,27 @@
+<h1>Listing wuhaos</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Due on</th>
+    <th>Completed</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @wuhaos.each do |wuhao| %>
+  <tr>
+    <td><%= wuhao.name %></td>
+    <td><%= wuhao.due_on %></td>
+    <td><%= wuhao.completed %></td>
+    <td><%= link_to 'Show', wuhao %></td>
+    <td><%= link_to 'Edit', edit_wuhao_path(wuhao) %></td>
+    <td><%= link_to 'Destroy', wuhao, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Wuhao', new_wuhao_path %>
